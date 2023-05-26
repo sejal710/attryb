@@ -1,0 +1,83 @@
+.car-item {
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.car-details {
+  width: 100%;
+  padding-top: 16px;
+}
+
+.car-details h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+.car-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.delete-button,
+.update-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.update-button {
+  background-color: #6E40FF;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .car-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}

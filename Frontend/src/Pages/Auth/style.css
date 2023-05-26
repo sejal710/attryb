@@ -1,0 +1,92 @@
+.auth {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://accounts.attryb.com/assets/background-dots-square-b11a6e83.svg'),
+    url('https://accounts.attryb.com/assets/background-dots-rect-fc836f18.svg');
+  background-repeat: no-repeat;
+  background-position: right top, left bottom;
+  background-size: auto, auto;
+  image-rendering: pixelated;
+}
+
+.toggle-container {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.toggle-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #6e40ff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toggle-button.active {
+  background-color: #6e40ff;
+  color: #ffffff;
+}
+
+.create-account-page {
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-account-page h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6e40ff;
+  text-align: center;
+}
+
+.create-account-page form {
+  width: 100%;
+}
+
+.create-account-page input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.create-account-page button[type="submit"] {
+  padding: 8px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  background-color: #6e40ff;
+  color: #ffffff;
+}
+
+
+
+@media (max-width: 600px) {
+  .create-account-page {
+    max-width: 100%;
+  }
+}
