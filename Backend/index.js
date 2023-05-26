@@ -2,6 +2,7 @@ const express = require("express");
 const {connection} = require("./db");
 const cors = require("cors");
 require('dotenv').config();
+const {authetication} = require("./middleware/authentication")
 const app = express()
 const {userRouter}  = require("./router/user.router");
 const {carRouter} = require("./router/car.router")
@@ -13,6 +14,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userRouter)
+app.use(authetication)
 app.use("/car",carRouter)
 
 
