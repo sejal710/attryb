@@ -16,8 +16,5 @@
 <h3>Add Data</h3>
 <img src='./Frontend/Images/AddData.png'>
 
-<h3>Ressponsive </h3>
-<img src="./Frontend/Images/Responsive.png'>
-
-<!-- <h2 > Deploy </h2>
+<!-- <h3> Deploy </h3>
 <a href="https://attryb-alpha.vercel.app" target="blank"> Link</a> -->
