@@ -4,13 +4,16 @@ import {useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Product = ({ car}) => {
+const Product = ({ car,token}) => {
   const navigate = useNavigate()
   const handleDelete = async() => {
     // Handle delete functionality here
     try {
       const response = await fetch(`http://localhost:8080/car/${car._id}`, {
         method: 'DELETE',
+        headers: {
+          'Authorization': token, // Include the authorization token in the headers
+        },
       });
   
       if (response.ok) {
@@ -26,7 +29,7 @@ const Product = ({ car}) => {
 
   const handleUpdate = () => {
     toast("Please Change What you want to update")
-    navigate("/update",{state:{car}})
+    navigate("/update",{state:{car,token:token}})
   };
 
  

@@ -22,7 +22,7 @@ const Signin = () => {
     // Perform account creation logic here
     let data  = {email:email,password:password}
     try {
-        const response = await fetch('http://localhost:8080/user/login', {
+        const response = await fetch('https://attryb.onrender.com/user/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

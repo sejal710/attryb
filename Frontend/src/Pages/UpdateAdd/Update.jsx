@@ -7,6 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Update() {
   const location = useLocation();
   const navigate = useNavigate()
+  const token = localStorage.getItem("Car Token");
+  if(!token){
+    navigate("/")
+  }  
   const data = location.state.car
   const [formData, setFormData] = useState({
     image: data.image,
@@ -29,10 +33,11 @@ export default function Update() {
     e.preventDefault();
     // Handle form submission here
     try {
-      const response = await fetch(`http://localhost:8080/car/${data._id}`, {
+      const response = await fetch(`https://attryb.onrender.com/car/${data._id}`, {
         method: 'PATCH', // or 'PATCH' depending on your API
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': location.state.token
         },
         body: JSON.stringify(formData),
       });
